@@ -8,8 +8,6 @@ import com.mycompany.sistematurnos.logica.Medico;
 import com.mycompany.sistematurnos.utilidades.UtilidadesTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.text.Normalizer;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -25,6 +23,7 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
         
         initComponents();
         cargarTabla();
+
         
         /* Así, cuando el usuario haga clic o tabule en el campo, se limpia el 
         texto, y si no escribió nada y salió del campo, vuelve el texto de ayuda. */

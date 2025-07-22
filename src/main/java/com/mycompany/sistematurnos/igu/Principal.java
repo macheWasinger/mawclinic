@@ -2,12 +2,16 @@ package com.mycompany.sistematurnos.igu;
 
 import com.mycompany.sistematurnos.utilidades.UtilidadesCardLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
 
 
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents(); // Esto carga todo el diseño visual (Design)
+        
+        UIManager.put("Button.focus", new Color(0, 0, 0, 0)); // Transparente
         
         // Deshabilita el botón de maximizar y redimensionar
         setResizable(false);
@@ -110,11 +114,11 @@ public class Principal extends javax.swing.JFrame {
         btnSalirDeLaApp.setBackground(new java.awt.Color(135, 198, 236));
         btnSalirDeLaApp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalirDeLaApp.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalirDeLaApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconExit_26x26.png"))); // NOI18N
+        btnSalirDeLaApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconExit28x28.png"))); // NOI18N
         btnSalirDeLaApp.setText("Salir");
         btnSalirDeLaApp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnSalirDeLaApp.setFocusPainted(false);
-        btnSalirDeLaApp.setIconTextGap(8);
+        btnSalirDeLaApp.setIconTextGap(5);
         btnSalirDeLaApp.setMaximumSize(new java.awt.Dimension(132, 32));
         btnSalirDeLaApp.setMinimumSize(new java.awt.Dimension(132, 32));
         btnSalirDeLaApp.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -127,10 +131,11 @@ public class Principal extends javax.swing.JFrame {
         btnGestionDatos.setBackground(new java.awt.Color(135, 198, 236));
         btnGestionDatos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGestionDatos.setForeground(new java.awt.Color(255, 255, 255));
-        btnGestionDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconGestionDatos26x26.png"))); // NOI18N
+        btnGestionDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconGestionDatos_20x20.png"))); // NOI18N
         btnGestionDatos.setText("Gestión de Datos");
         btnGestionDatos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnGestionDatos.setFocusPainted(false);
+        btnGestionDatos.setIconTextGap(8);
         btnGestionDatos.setMaximumSize(new java.awt.Dimension(132, 32));
         btnGestionDatos.setMinimumSize(new java.awt.Dimension(132, 32));
         btnGestionDatos.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -178,7 +183,7 @@ public class Principal extends javax.swing.JFrame {
         btnCargarMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnCargarMedico.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCargarMedico.setFocusPainted(false);
-        btnCargarMedico.setIconTextGap(6);
+        btnCargarMedico.setIconTextGap(5);
         btnCargarMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCargarMedicoActionPerformed(evt);
@@ -205,11 +210,11 @@ public class Principal extends javax.swing.JFrame {
         btnCargarTurno.setBackground(new java.awt.Color(135, 198, 236));
         btnCargarTurno.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCargarTurno.setForeground(new java.awt.Color(255, 255, 255));
-        btnCargarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconTurno22x22.png"))); // NOI18N
+        btnCargarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconTurno26x26.png"))); // NOI18N
         btnCargarTurno.setText("Cargar Turno");
         btnCargarTurno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnCargarTurno.setFocusPainted(false);
-        btnCargarTurno.setIconTextGap(8);
+        btnCargarTurno.setIconTextGap(7);
         btnCargarTurno.setMaximumSize(new java.awt.Dimension(132, 32));
         btnCargarTurno.setMinimumSize(new java.awt.Dimension(132, 32));
         btnCargarTurno.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -226,7 +231,7 @@ public class Principal extends javax.swing.JFrame {
         btnVolverDeGestionDatos.setText("Volver");
         btnVolverDeGestionDatos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVolverDeGestionDatos.setFocusPainted(false);
-        btnVolverDeGestionDatos.setIconTextGap(10);
+        btnVolverDeGestionDatos.setIconTextGap(5);
         btnVolverDeGestionDatos.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVolverDeGestionDatos.setMinimumSize(new java.awt.Dimension(132, 32));
         btnVolverDeGestionDatos.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -272,7 +277,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerMedicos.setText("Ver Médicos");
         btnVerMedicos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerMedicos.setFocusPainted(false);
-        btnVerMedicos.setIconTextGap(6);
+        btnVerMedicos.setIconTextGap(5);
         btnVerMedicos.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVerMedicos.setMinimumSize(new java.awt.Dimension(132, 32));
         btnVerMedicos.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -289,7 +294,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerPacientes.setText("Ver Pacientes");
         btnVerPacientes.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerPacientes.setFocusPainted(false);
-        btnVerPacientes.setIconTextGap(7);
+        btnVerPacientes.setIconTextGap(5);
         btnVerPacientes.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVerPacientes.setMinimumSize(new java.awt.Dimension(132, 32));
         btnVerPacientes.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -302,11 +307,11 @@ public class Principal extends javax.swing.JFrame {
         btnVerTurnos.setBackground(new java.awt.Color(135, 198, 236));
         btnVerTurnos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVerTurnos.setForeground(new java.awt.Color(255, 255, 255));
-        btnVerTurnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVerTurnos24x24.png"))); // NOI18N
+        btnVerTurnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVerTurnos26x26.png"))); // NOI18N
         btnVerTurnos.setText("Ver Turnos");
         btnVerTurnos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerTurnos.setFocusPainted(false);
-        btnVerTurnos.setIconTextGap(8);
+        btnVerTurnos.setIconTextGap(5);
         btnVerTurnos.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVerTurnos.setMinimumSize(new java.awt.Dimension(132, 32));
         btnVerTurnos.setPreferredSize(new java.awt.Dimension(132, 32));
@@ -323,7 +328,7 @@ public class Principal extends javax.swing.JFrame {
         btnVolverDeVerRegistros.setText("Volver");
         btnVolverDeVerRegistros.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVolverDeVerRegistros.setFocusPainted(false);
-        btnVolverDeVerRegistros.setIconTextGap(10);
+        btnVolverDeVerRegistros.setIconTextGap(5);
         btnVolverDeVerRegistros.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVolverDeVerRegistros.setMinimumSize(new java.awt.Dimension(132, 32));
         btnVolverDeVerRegistros.setPreferredSize(new java.awt.Dimension(132, 32));
