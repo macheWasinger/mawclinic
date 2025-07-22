@@ -222,6 +222,7 @@
                       <Image iconType="3" name="/iconRegistros26x26.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ver Registros"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consultar los registros almacenados en el sistema"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -259,6 +260,7 @@
                       <Image iconType="3" name="/iconExit28x28.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Salir"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Cerrar el sistema y salir de MawClinic"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -297,6 +299,7 @@
                       <Image iconType="3" name="/iconGestionDatos_20x20.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Gesti&#xf3;n de Datos"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Acceder a la gesti&#xf3;n de m&#xe9;dicos, pacientes y turnos"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -381,6 +384,7 @@
                       <Image iconType="3" name="/iconMedico24x24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cargar M&#xe9;dico"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Cargar un nuevo m&#xe9;dico"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -413,6 +417,7 @@
                       <Image iconType="3" name="/iconPaciente_25x25.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cargar Paciente"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Cargar un nuevo paciente"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -451,6 +456,7 @@
                       <Image iconType="3" name="/iconTurno26x26.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cargar Turno"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Cargar un nuevo turno"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -489,6 +495,7 @@
                       <Image iconType="3" name="/iconVolver_24x24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Volver"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Volver al men&#xfa; anterior"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -575,6 +582,7 @@
                       <Image iconType="3" name="/iconVerMedicos_24x24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ver M&#xe9;dicos"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Ver la lista de m&#xe9;dicos registrados"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -613,6 +621,7 @@
                       <Image iconType="3" name="/iconVerPacientes26x26.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ver Pacientes"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Ver la lista de pacientes registrados"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -651,6 +660,7 @@
                       <Image iconType="3" name="/iconVerTurnos26x26.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ver Turnos"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Ver los turnos m&#xe9;dicos programados"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">
@@ -692,6 +702,7 @@
                       <Image iconType="3" name="/iconVolver_24x24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Volver"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Volver al men&#xfa; anterior"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder roundedCorners="true">

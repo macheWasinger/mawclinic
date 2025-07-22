@@ -5,6 +5,7 @@ import com.mycompany.sistematurnos.logica.ControladoraLogica;
 import com.mycompany.sistematurnos.logica.Medico;
 import com.mycompany.sistematurnos.logica.Paciente;
 import com.mycompany.sistematurnos.logica.Turno;
+import com.mycompany.sistematurnos.utilidades.UtilidadesBotones;
 import com.mycompany.sistematurnos.utilidades.UtilidadesCardLayout;
 import com.mycompany.sistematurnos.utilidades.UtilidadesMetodosAuxiliares;
 import java.awt.event.ActionEvent;
@@ -32,8 +33,11 @@ public class PanelCargarTurno extends javax.swing.JPanel {
 
     public PanelCargarTurno() {
         controlLogico = new ControladoraLogica();
-        
         initComponents();
+        
+        UtilidadesBotones.aplicarHoverGrises(btnLimpiar);
+        UtilidadesBotones.aplicarHoverGrises(btnCancelar);
+        UtilidadesBotones.aplicarHoverGrises(btnGuardar);
         
 
         // Limpio el combo por si acaso
@@ -128,6 +132,7 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         contenedorFormulario.setPreferredSize(new java.awt.Dimension(333, 317));
 
         fechaJCalendar.setBackground(new java.awt.Color(255, 255, 255));
+        fechaJCalendar.setToolTipText("Seleccione la fecha en la que se desea asignar el turno");
         fechaJCalendar.setDateFormatString("d/MM/yyyy");
         fechaJCalendar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         fechaJCalendar.setMinimumSize(new java.awt.Dimension(155, 20));
@@ -138,6 +143,7 @@ public class PanelCargarTurno extends javax.swing.JPanel {
 
         cmbHora.setBackground(new java.awt.Color(255, 255, 255));
         cmbHora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+        cmbHora.setToolTipText("Seleccione una hora disponible del médico para el turno");
         cmbHora.setBorder(null);
         cmbHora.setMinimumSize(new java.awt.Dimension(155, 20));
         cmbHora.setPreferredSize(new java.awt.Dimension(165, 30));
@@ -154,6 +160,7 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         labelPaciente.setText("Paciente:");
 
         cmbListaPacientes.setBackground(new java.awt.Color(255, 255, 255));
+        cmbListaPacientes.setToolTipText("Seleccione el paciente al que se le asignará el turno");
         cmbListaPacientes.setBorder(null);
         cmbListaPacientes.setMinimumSize(new java.awt.Dimension(155, 20));
         cmbListaPacientes.setPreferredSize(new java.awt.Dimension(165, 30));
@@ -162,6 +169,7 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         labelMedico.setText("Médico:");
 
         cmbListaMedicos.setBackground(new java.awt.Color(255, 255, 255));
+        cmbListaMedicos.setToolTipText("Seleccione el médico para asignar el turno");
         cmbListaMedicos.setBorder(null);
         cmbListaMedicos.setMinimumSize(new java.awt.Dimension(155, 20));
         cmbListaMedicos.setPreferredSize(new java.awt.Dimension(165, 30));
@@ -214,8 +222,9 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         btnLimpiar.setBackground(new java.awt.Color(213, 213, 213));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar30x30.png"))); // NOI18N
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar28x28.png"))); // NOI18N
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.setToolTipText("Limpiar todos los campos");
         btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnLimpiar.setFocusPainted(false);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -227,8 +236,9 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         btnGuardar.setBackground(new java.awt.Color(213, 213, 213));
         btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save_30x30.png"))); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save23x23.png"))); // NOI18N
         btnGuardar.setText("Guardar");
+        btnGuardar.setToolTipText("Guardar los datos del turno");
         btnGuardar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnGuardar.setFocusPainted(false);
         btnGuardar.setMaximumSize(new java.awt.Dimension(108, 41));
@@ -243,8 +253,9 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         btnCancelar.setBackground(new java.awt.Color(213, 213, 213));
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconCancelar24x24.png"))); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconCancelar25x25.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
+        btnCancelar.setToolTipText("Cancelar y volver al menú");
         btnCancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnCancelar.setFocusPainted(false);
         btnCancelar.setMaximumSize(new java.awt.Dimension(108, 41));

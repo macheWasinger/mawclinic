@@ -104,7 +104,8 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
         subtituloTabla.setForeground(new java.awt.Color(153, 153, 153));
         subtituloTabla.setText("Seleccione un turno para eliminar o editar sus datos:");
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete30x30.png"))); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete_30x30.png"))); // NOI18N
+        btnEliminar.setToolTipText("Eliminar turno seleccionado");
         btnEliminar.setBorder(null);
         btnEliminar.setBorderPainted(false);
         btnEliminar.setContentAreaFilled(false);
@@ -116,7 +117,8 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
             }
         });
 
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edit30x30.png"))); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edit26x26.png"))); // NOI18N
+        btnEditar.setToolTipText("Editar turno seleccionado");
         btnEditar.setBorder(null);
         btnEditar.setBorderPainted(false);
         btnEditar.setContentAreaFilled(false);
@@ -134,6 +136,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
         txtFecha.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtFecha.setForeground(new java.awt.Color(153, 153, 153));
         txtFecha.setText("Ingrese una Fecha");
+        txtFecha.setToolTipText("Presione Enter o clic en 'Buscar' luego de ingresar el texto");
         txtFecha.setBorder(null);
         txtFecha.setMargin(new java.awt.Insets(0, 0, 0, 0));
         txtFecha.setMinimumSize(new java.awt.Dimension(64, 16));
@@ -148,7 +151,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
 
         btnSearch.setBackground(new java.awt.Color(255, 255, 255));
         btnSearch.setForeground(new java.awt.Color(51, 51, 51));
-        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconSearch-20x20.png"))); // NOI18N
+        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconSearch19x19.png"))); // NOI18N
         btnSearch.setToolTipText("Buscar turno por fecha");
         btnSearch.setBorder(null);
         btnSearch.setFocusPainted(false);
@@ -186,7 +189,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
 
         btnX.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btnX.setForeground(new java.awt.Color(255, 0, 0));
-        btnX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel_15x15.png"))); // NOI18N
+        btnX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel13x13.png"))); // NOI18N
         btnX.setBorder(null);
         btnX.setBorderPainted(false);
         btnX.setContentAreaFilled(false);

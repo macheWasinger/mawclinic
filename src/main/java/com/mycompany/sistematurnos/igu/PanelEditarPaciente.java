@@ -6,6 +6,7 @@ import com.mycompany.sistematurnos.utilidades.UtilidadesMetodosAuxiliares;
 import com.mycompany.sistematurnos.utilidades.UtilidadesTexto;
 import com.mycompany.sistematurnos.logica.ControladoraLogica;
 import com.mycompany.sistematurnos.logica.Paciente;
+import com.mycompany.sistematurnos.utilidades.UtilidadesBotones;
 
 
 public class PanelEditarPaciente extends javax.swing.JPanel {
@@ -17,8 +18,11 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
     public PanelEditarPaciente(Long num_id) {
         
         controlLogico = new ControladoraLogica();    
-        
         initComponents();
+        
+        UtilidadesBotones.aplicarHoverGrises(btnLimpiar);
+        UtilidadesBotones.aplicarHoverGrises(btnCancelarCambios);
+        UtilidadesBotones.aplicarHoverGrises(btnGuardarCambios);
         
         /* Con esto, "num_id" ya tiene valor cuando llamo y no es nulo al 
            buscar el médico. */
@@ -168,8 +172,9 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
         btnLimpiar.setBackground(new java.awt.Color(213, 213, 213));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar30x30.png"))); // NOI18N
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar28x28.png"))); // NOI18N
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.setToolTipText("Limpiar todos los campos");
         btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnLimpiar.setFocusPainted(false);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -181,8 +186,9 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
         btnGuardarCambios.setBackground(new java.awt.Color(213, 213, 213));
         btnGuardarCambios.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnGuardarCambios.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save_30x30.png"))); // NOI18N
+        btnGuardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save23x23.png"))); // NOI18N
         btnGuardarCambios.setText("Guardar");
+        btnGuardarCambios.setToolTipText("Guardar los cambios del paciente");
         btnGuardarCambios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnGuardarCambios.setFocusPainted(false);
         btnGuardarCambios.setMaximumSize(new java.awt.Dimension(83, 32));
@@ -197,8 +203,9 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
         btnCancelarCambios.setBackground(new java.awt.Color(213, 213, 213));
         btnCancelarCambios.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnCancelarCambios.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconCancelar24x24.png"))); // NOI18N
+        btnCancelarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconCancelar25x25.png"))); // NOI18N
         btnCancelarCambios.setText("Cancelar");
+        btnCancelarCambios.setToolTipText("Cancelar la edición y volver al menú");
         btnCancelarCambios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         btnCancelarCambios.setFocusPainted(false);
         btnCancelarCambios.setMaximumSize(new java.awt.Dimension(83, 32));

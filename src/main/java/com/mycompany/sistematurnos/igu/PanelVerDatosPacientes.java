@@ -101,7 +101,8 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
         subtituloTabla.setForeground(new java.awt.Color(153, 153, 153));
         subtituloTabla.setText("Seleccione un paciente para eliminar o editar sus datos:");
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete30x30.png"))); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete_30x30.png"))); // NOI18N
+        btnEliminar.setToolTipText("Eliminar paciente seleccionado");
         btnEliminar.setBorder(null);
         btnEliminar.setBorderPainted(false);
         btnEliminar.setContentAreaFilled(false);
@@ -113,7 +114,8 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
             }
         });
 
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edit30x30.png"))); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edit26x26.png"))); // NOI18N
+        btnEditar.setToolTipText("Editar paciente seleccionado");
         btnEditar.setBorder(null);
         btnEditar.setBorderPainted(false);
         btnEditar.setContentAreaFilled(false);
@@ -131,6 +133,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
         txtNombreOdni.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtNombreOdni.setForeground(new java.awt.Color(153, 153, 153));
         txtNombreOdni.setText("Ingrese un Nombre o DNI");
+        txtNombreOdni.setToolTipText("Presione Enter o clic en 'Buscar' luego de ingresar el texto");
         txtNombreOdni.setBorder(null);
         txtNombreOdni.setPreferredSize(new java.awt.Dimension(179, 16));
         txtNombreOdni.setSelectionEnd(32);
@@ -138,8 +141,8 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
         btnSearch.setBackground(new java.awt.Color(255, 255, 255));
         btnSearch.setForeground(new java.awt.Color(51, 51, 51));
-        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconSearch-20x20.png"))); // NOI18N
-        btnSearch.setToolTipText("Buscar paciente por nombre o dni");
+        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconSearch19x19.png"))); // NOI18N
+        btnSearch.setToolTipText("Buscar paciente por nombre o DNI");
         btnSearch.setBorder(null);
         btnSearch.setBorderPainted(false);
         btnSearch.setFocusPainted(false);
@@ -174,7 +177,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
         btnX.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btnX.setForeground(new java.awt.Color(255, 0, 0));
-        btnX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel_15x15.png"))); // NOI18N
+        btnX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel13x13.png"))); // NOI18N
         btnX.setBorder(null);
         btnX.setBorderPainted(false);
         btnX.setContentAreaFilled(false);

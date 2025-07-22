@@ -1,8 +1,11 @@
 package com.mycompany.sistematurnos.igu;
 
+import com.mycompany.sistematurnos.utilidades.UtilidadesBotones;
 import com.mycompany.sistematurnos.utilidades.UtilidadesCardLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Font;
+import javax.swing.BorderFactory;
 import javax.swing.UIManager;
 
 
@@ -12,6 +15,13 @@ public class Principal extends javax.swing.JFrame {
         initComponents(); // Esto carga todo el diseño visual (Design)
         
         UIManager.put("Button.focus", new Color(0, 0, 0, 0)); // Transparente
+        UIManager.put("ToolTip.foreground", Color.WHITE);
+        UIManager.put("ToolTip.background", Color.BLACK);
+        UIManager.put("ToolTip.font", new Font("SansSerif", Font.PLAIN, 12));
+        UIManager.put("ToolTip.border", BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(Color.GRAY),                   // borde visible
+            BorderFactory.createEmptyBorder(5, 10, 5, 10)                 // padding interno
+        ));
         
         // Deshabilita el botón de maximizar y redimensionar
         setResizable(false);
@@ -20,6 +30,17 @@ public class Principal extends javax.swing.JFrame {
         
         cargarPantallas();
         
+        UtilidadesBotones.aplicarHoverCelestes(btnGestionDatos);
+        UtilidadesBotones.aplicarHoverCelestes(btnVerRegistros);
+        UtilidadesBotones.aplicarHoverCelestes(btnSalirDeLaApp);
+        UtilidadesBotones.aplicarHoverCelestes(btnCargarMedico);
+        UtilidadesBotones.aplicarHoverCelestes(btnCargarPaciente);
+        UtilidadesBotones.aplicarHoverCelestes(btnCargarTurno);
+        UtilidadesBotones.aplicarHoverCelestes(btnVolverDeGestionDatos);
+        UtilidadesBotones.aplicarHoverCelestes(btnVerMedicos);
+        UtilidadesBotones.aplicarHoverCelestes(btnVerPacientes);
+        UtilidadesBotones.aplicarHoverCelestes(btnVerTurnos);
+        UtilidadesBotones.aplicarHoverCelestes(btnVolverDeVerRegistros);
     }
 
  
@@ -100,6 +121,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerRegistros.setForeground(new java.awt.Color(255, 255, 255));
         btnVerRegistros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconRegistros26x26.png"))); // NOI18N
         btnVerRegistros.setText("Ver Registros");
+        btnVerRegistros.setToolTipText("Consultar los registros almacenados en el sistema");
         btnVerRegistros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(73, 159, 221)));
         btnVerRegistros.setFocusPainted(false);
         btnVerRegistros.setMaximumSize(new java.awt.Dimension(132, 32));
@@ -116,6 +138,7 @@ public class Principal extends javax.swing.JFrame {
         btnSalirDeLaApp.setForeground(new java.awt.Color(255, 255, 255));
         btnSalirDeLaApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconExit28x28.png"))); // NOI18N
         btnSalirDeLaApp.setText("Salir");
+        btnSalirDeLaApp.setToolTipText("Cerrar el sistema y salir de MawClinic");
         btnSalirDeLaApp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnSalirDeLaApp.setFocusPainted(false);
         btnSalirDeLaApp.setIconTextGap(5);
@@ -133,6 +156,7 @@ public class Principal extends javax.swing.JFrame {
         btnGestionDatos.setForeground(new java.awt.Color(255, 255, 255));
         btnGestionDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconGestionDatos_20x20.png"))); // NOI18N
         btnGestionDatos.setText("Gestión de Datos");
+        btnGestionDatos.setToolTipText("Acceder a la gestión de médicos, pacientes y turnos");
         btnGestionDatos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnGestionDatos.setFocusPainted(false);
         btnGestionDatos.setIconTextGap(8);
@@ -180,6 +204,7 @@ public class Principal extends javax.swing.JFrame {
         btnCargarMedico.setForeground(new java.awt.Color(255, 255, 255));
         btnCargarMedico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconMedico24x24.png"))); // NOI18N
         btnCargarMedico.setText("Cargar Médico");
+        btnCargarMedico.setToolTipText("Cargar un nuevo médico");
         btnCargarMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnCargarMedico.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCargarMedico.setFocusPainted(false);
@@ -195,6 +220,7 @@ public class Principal extends javax.swing.JFrame {
         btnCargarPaciente.setForeground(new java.awt.Color(255, 255, 255));
         btnCargarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconPaciente_25x25.png"))); // NOI18N
         btnCargarPaciente.setText("Cargar Paciente");
+        btnCargarPaciente.setToolTipText("Cargar un nuevo paciente");
         btnCargarPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnCargarPaciente.setFocusPainted(false);
         btnCargarPaciente.setIconTextGap(3);
@@ -212,6 +238,7 @@ public class Principal extends javax.swing.JFrame {
         btnCargarTurno.setForeground(new java.awt.Color(255, 255, 255));
         btnCargarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconTurno26x26.png"))); // NOI18N
         btnCargarTurno.setText("Cargar Turno");
+        btnCargarTurno.setToolTipText("Cargar un nuevo turno");
         btnCargarTurno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnCargarTurno.setFocusPainted(false);
         btnCargarTurno.setIconTextGap(7);
@@ -229,6 +256,7 @@ public class Principal extends javax.swing.JFrame {
         btnVolverDeGestionDatos.setForeground(new java.awt.Color(255, 255, 255));
         btnVolverDeGestionDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVolver_24x24.png"))); // NOI18N
         btnVolverDeGestionDatos.setText("Volver");
+        btnVolverDeGestionDatos.setToolTipText("Volver al menú anterior");
         btnVolverDeGestionDatos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVolverDeGestionDatos.setFocusPainted(false);
         btnVolverDeGestionDatos.setIconTextGap(5);
@@ -275,6 +303,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerMedicos.setForeground(new java.awt.Color(255, 255, 255));
         btnVerMedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVerMedicos_24x24.png"))); // NOI18N
         btnVerMedicos.setText("Ver Médicos");
+        btnVerMedicos.setToolTipText("Ver la lista de médicos registrados");
         btnVerMedicos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerMedicos.setFocusPainted(false);
         btnVerMedicos.setIconTextGap(5);
@@ -292,6 +321,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerPacientes.setForeground(new java.awt.Color(255, 255, 255));
         btnVerPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVerPacientes26x26.png"))); // NOI18N
         btnVerPacientes.setText("Ver Pacientes");
+        btnVerPacientes.setToolTipText("Ver la lista de pacientes registrados");
         btnVerPacientes.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerPacientes.setFocusPainted(false);
         btnVerPacientes.setIconTextGap(5);
@@ -309,6 +339,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerTurnos.setForeground(new java.awt.Color(255, 255, 255));
         btnVerTurnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVerTurnos26x26.png"))); // NOI18N
         btnVerTurnos.setText("Ver Turnos");
+        btnVerTurnos.setToolTipText("Ver los turnos médicos programados");
         btnVerTurnos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerTurnos.setFocusPainted(false);
         btnVerTurnos.setIconTextGap(5);
@@ -326,6 +357,7 @@ public class Principal extends javax.swing.JFrame {
         btnVolverDeVerRegistros.setForeground(new java.awt.Color(255, 255, 255));
         btnVolverDeVerRegistros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconVolver_24x24.png"))); // NOI18N
         btnVolverDeVerRegistros.setText("Volver");
+        btnVolverDeVerRegistros.setToolTipText("Volver al menú anterior");
         btnVolverDeVerRegistros.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVolverDeVerRegistros.setFocusPainted(false);
         btnVolverDeVerRegistros.setIconTextGap(5);
