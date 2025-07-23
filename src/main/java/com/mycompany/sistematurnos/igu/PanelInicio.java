@@ -23,13 +23,13 @@ public class PanelInicio extends javax.swing.JPanel {
         contenedorInicio.setMinimumSize(new java.awt.Dimension(0, 0));
         contenedorInicio.setPreferredSize(new java.awt.Dimension(1040, 560));
 
-        logoGrandeInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoInicio-40%-400x360.png"))); // NOI18N
+        logoGrandeInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoInicio-30%-350x313.png"))); // NOI18N
 
-        txtTituloBienvenidaInicio.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        txtTituloBienvenidaInicio.setFont(new java.awt.Font("Segoe UI", 1, 27)); // NOI18N
         txtTituloBienvenidaInicio.setForeground(new java.awt.Color(74, 163, 223));
         txtTituloBienvenidaInicio.setText("Bienvenido a MawClinic");
 
-        txtSubtituloInicio.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtSubtituloInicio.setFont(new java.awt.Font("Segoe UI", 2, 15)); // NOI18N
         txtSubtituloInicio.setForeground(new java.awt.Color(153, 153, 153));
         txtSubtituloInicio.setText("Administre médicos, pacientes y turnos de forma centralizada ");
 
@@ -38,33 +38,38 @@ public class PanelInicio extends javax.swing.JPanel {
         contenedorInicioLayout.setHorizontalGroup(
             contenedorInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorInicioLayout.createSequentialGroup()
-                .addGap(382, 382, 382)
-                .addComponent(txtTituloBienvenidaInicio)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(344, 344, 344)
+                .addComponent(logoGrandeInicio)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorInicioLayout.createSequentialGroup()
-                .addContainerGap(313, Short.MAX_VALUE)
-                .addGroup(contenedorInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtSubtituloInicio)
-                    .addComponent(logoGrandeInicio))
-                .addGap(313, 313, 313))
+                .addGap(0, 321, Short.MAX_VALUE)
+                .addComponent(txtSubtituloInicio)
+                .addGap(321, 321, 321))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorInicioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtTituloBienvenidaInicio)
+                .addGap(366, 366, 366))
         );
         contenedorInicioLayout.setVerticalGroup(
             contenedorInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorInicioLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+            .addGroup(contenedorInicioLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
                 .addComponent(txtTituloBienvenidaInicio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSubtituloInicio)
-                .addGap(36, 36, 36)
+                .addGap(47, 47, 47)
                 .addComponent(logoGrandeInicio)
-                .addGap(60, 60, 60))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedorInicio, 1038, 1038, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contenedorInicio, 1038, 1038, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

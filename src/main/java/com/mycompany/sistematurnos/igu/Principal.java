@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 
 
@@ -43,7 +44,9 @@ public class Principal extends javax.swing.JFrame {
         UtilidadesBotones.aplicarHoverCelestes(btnVerTurnos);
         UtilidadesBotones.aplicarHoverCelestes(btnVolverDeVerRegistros);
         
-         panelPantallas.setBorder(new MatteBorder(1, 1, 4, 4, new Color(218, 218, 218)));
+        panelPantallas.setBorder(new MatteBorder(1, 1, 4, 4, new Color(218, 218, 218)));
+        
+        btnGestionDatos.setBorder(new LineBorder(new Color(135, 198, 236, 255), 1, true));
     }
 
  
@@ -81,7 +84,7 @@ public class Principal extends javax.swing.JFrame {
         logoTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon-MawClinic.png"))); // NOI18N
         logoTitulo.setText("jLabel3");
 
-        txtTituloPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        txtTituloPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         txtTituloPrincipal.setForeground(new java.awt.Color(23, 84, 125));
         txtTituloPrincipal.setText("MawClinic – Sistema de Turnos Médicos");
 
@@ -125,7 +128,7 @@ public class Principal extends javax.swing.JFrame {
         btnVerRegistros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconRegistros26x26.png"))); // NOI18N
         btnVerRegistros.setText("Ver Registros");
         btnVerRegistros.setToolTipText("Consultar los registros almacenados en el sistema");
-        btnVerRegistros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(73, 159, 221)));
+        btnVerRegistros.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 159, 221), 1, true));
         btnVerRegistros.setFocusPainted(false);
         btnVerRegistros.setMaximumSize(new java.awt.Dimension(132, 32));
         btnVerRegistros.setMinimumSize(new java.awt.Dimension(132, 32));

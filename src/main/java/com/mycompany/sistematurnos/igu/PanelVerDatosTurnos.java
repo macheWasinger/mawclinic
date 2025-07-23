@@ -3,6 +3,7 @@ package com.mycompany.sistematurnos.igu;
 import com.mycompany.sistematurnos.utilidades.UtilidadesCardLayout;
 import com.mycompany.sistematurnos.logica.ControladoraLogica;
 import com.mycompany.sistematurnos.logica.Turno;
+import com.mycompany.sistematurnos.utilidades.UtilidadesBotones;
 import com.mycompany.sistematurnos.utilidades.UtilidadesJOptionPane;
 import com.mycompany.sistematurnos.utilidades.UtilidadesTableModel;
 import java.awt.event.ActionEvent;
@@ -24,6 +25,11 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
         
         initComponents();
         cargarTabla();
+        
+        UtilidadesBotones.aplicarIconoManoCursor(btnSearch);
+        UtilidadesBotones.aplicarIconoManoCursor(btnEliminar);
+        UtilidadesBotones.aplicarIconoManoCursor(btnEditar);
+        UtilidadesBotones.aplicarIconoManoCursor(btnX);
         
         /* Así, cuando el usuario haga clic o tabule en el campo, se limpia el 
         texto, y si no escribió nada y salió del campo, vuelve el texto de ayuda. */

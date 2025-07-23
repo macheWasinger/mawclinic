@@ -46,4 +46,8 @@ public class UtilidadesBotones {
             }
         });
     }
+    
+    public static void aplicarIconoManoCursor(JButton boton) {
+        boton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }
 }
