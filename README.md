@@ -1,99 +1,57 @@
-\# MawClinic 🏥  
+# MawClinic – Sistema de Turnos Médicos 🏥
+Gestión médica simple y eficiente
 
-\### Sistema de Turnos Médicos - Proyecto Java con Swing, JPA y MySQL
+---
 
 Este proyecto simula un sistema de turnos médicos, desarrollado en Java como ejercicio de práctica con Programación Orientada a Objetos, persistencia con JPA (EclipseLink), base de datos MySQL e interfaz gráfica usando Swing.
 
 Permite registrar médicos, pacientes y gestionar turnos entre ellos mediante una interfaz amigable.
 
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Tener instalado Java (JDK 17 o superior)
+2. Tener MySQL corriendo y crear una base de datos para el proyecto
+3. Configurar los datos de conexión en el archivo `persistence.xml`
+4. Abrir el proyecto en NetBeans
+5. Ejecutarlo desde consola o desde el IDE
 
 ---
 
+## ✅ Funcionalidades
 
-\## Tecnologías utilizadas
+### 👨‍⚕️ Médicos
+- Cargar, editar y eliminar médicos
+- Filtrar médicos por nombre o especialidad
 
-\- Java (JDK 17)  
+### 🧑‍🤝‍🧑 Pacientes
+- Cargar, editar y eliminar pacientes
+- Filtrar pacientes por nombre o DNI
 
-\- Swing (Interfaz gráfica)  
-
-\- JPA 2.1 con EclipseLink  
-
-\- MySQL  
-
-\- Maven  
-
-\- NetBeans
-
-
----
-
-
-\## Funcionalidades
-
-\- \*\*Médicos\*\*
-
-&nbsp; - Cargar, editar y eliminar médicos
-
-&nbsp; - Filtrar médicos por nombre o especialidad
-
-
-\- \*\*Pacientes\*\*
-
-&nbsp; - Cargar, editar y eliminar pacientes
-
-&nbsp; - Filtrar pacientes por nombre o DNI
-
-
-\- \*\*Turnos\*\*
-
-&nbsp; - Asignar turnos a pacientes con un médico, fecha y hora
-
-&nbsp; - Editar y eliminar turnos
-
-&nbsp; - Filtrar turnos por fecha
-
+### 📅 Turnos
+- Asignar turnos a pacientes con un médico, fecha y hora
+- Editar y eliminar turnos
+- Filtrar turnos por fecha
 
 ---
 
+## 💻 Tecnologías utilizadas
 
-\## Cómo ejecutar el proyecto
-
-1\. Tener instalado Java (JDK 17 o superior)  
-
-2\. Tener MySQL corriendo y crear la base de datos para el sistema  
-
-3\. Configurar los datos de conexión en el archivo `persistence.xml`  
-
-4\. Abrir el proyecto en NetBeans  
-
-5\. Ejecutar desde el IDE para iniciar la interfaz gráfica
-
+- Java (JDK 17)
+- Swing (Interfaz gráfica)
+- JPA 2.1 con EclipseLink
+- MySQL
+- Maven
+- NetBeans
 
 ---
 
+## 👤 Autor
 
-\## Cosas a futuro (pendientes)
-
-\- Validaciones más completas en los formularios  
-
-\- Historial de turnos por paciente  
-
-\- Exportar o imprimir turnos asignados  
-
-\- Autenticación de usuarios
-
+**Marcelo Wasinger**
 
 ---
 
-
-\## Autor
-
-Marcelo Wasinger
-
-
----
-
-
-Gracias por visitar el repositorio. ¡Se aceptan sugerencias o mejoras!
-
-
+Gracias por pasarte por el repo.  
+Cualquier sugerencia o mejora es bienvenida.
