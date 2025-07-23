@@ -38,7 +38,6 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         UtilidadesBotones.aplicarHoverGrises(btnLimpiar);
         UtilidadesBotones.aplicarHoverGrises(btnCancelar);
         UtilidadesBotones.aplicarHoverGrises(btnGuardar);
-        
 
         // Limpio el combo por si acaso
         cmbListaMedicos.removeAllItems();
@@ -396,8 +395,6 @@ public class PanelCargarTurno extends javax.swing.JPanel {
             // Guardar el turno
             controlLogico.guardarTurno(fechaObtenida, horaLocal, medicoSeleccionado, pacienteSeleccionado);
             UtilidadesJOptionPane.mostrarMensaje(this, "Turno guardado correctamente", "Info", "Registrar turno");
-
-
             UtilidadesMetodosAuxiliares.recargarTablaPanelVerDatosTurno(this);
 
             limpiarFormulario();
@@ -444,9 +441,7 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         for (Medico m : listaMedicos) {
             // Por ejemplo, usás el nombre como clave
             String clave = m.getId() + " - " + m.getNombre() + " - " + m.getEspecialidad();
-
             cmbListaMedicos.addItem(clave);
-
             mapaMedicos.put(clave, m);
         }
     }
@@ -455,7 +450,6 @@ public class PanelCargarTurno extends javax.swing.JPanel {
         for (Paciente p : listaPacientes) {
             String clave = p.getNombre() + " - DNI: " + p.getDni();
             cmbListaPacientes.addItem(clave);
-
             mapaPacientes.put(clave, p);
         }
     }
@@ -498,21 +492,22 @@ public class PanelCargarTurno extends javax.swing.JPanel {
                 /* Mediante la CLAVE seleccionada, obtengo el VALOR del 
                    map (o sea, el objeto Medico). */
                 medicoSeleccionado = mapaMedicos.get(claveMedicoSeleccionada);
+                
                 if (medicoSeleccionado != null) {
 
-                    cmbHora.removeAllItems();
                     /* Borro los horarios del médico anterior así no se acumulan
                        con los horarios del nuevo médico seleccionado. */
+                    cmbHora.removeAllItems();
 
-                    cmbHora.addItem("-");
                     /* Vuelvo a mostrar el indicador de que aún no ha 
                        seleccionado un horario. */
+                    cmbHora.addItem("-");
                     
                     horariosDisponiblesMedicos = new ArrayList<>(medicoSeleccionado.getHorariosDisponibles());
 
                     for (String horario : horariosDisponiblesMedicos) {
-                        cmbHora.addItem(horario);
                         // Se agregan los horarios del nuevo médico
+                        cmbHora.addItem(horario);
                     }
                 }
             }
@@ -535,7 +530,6 @@ public class PanelCargarTurno extends javax.swing.JPanel {
                     //cmbListaPacientes.addItem("-");
                     return;
                 }
-
                 pacienteSeleccionado = mapaPacientes.get(clavePacienteSeleccionado);
             }
         });

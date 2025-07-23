@@ -323,14 +323,14 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
                 long num_id = Long.parseLong(String.valueOf(tablaMedicos.getValueAt(tablaMedicos.getSelectedRow(), 0)));
                 /*
                 Ejemplo ilustrativo:
-                Si en la tabla tenés:
+                Si en la tabla tengo:
 
                 Id  |   Nombre
                 10  |   Pérez
                 15  |   Ramírez
                 22  |   González
 
-                Y seleccionaste la fila 1 (Ramírez), entonces:
+                Y selecciono la fila 1 (Ramírez), entonces:
 
                 - tablaMedicos.getSelectedRow() → 1
                 - tablaMedicos.getValueAt(1,0) → 15L
@@ -338,7 +338,7 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
                 - Long.parseLong(...) → 15L
                 - num_cliente = 15L
 
-                Así obtenés el identificador único del médico seleccionado.
+                Así obtengo el identificador único del médico seleccionado.
                 */
 
                 // La variable "confirmado" almacena "true o false"

@@ -17,7 +17,6 @@ public class PanelCargarMedico extends javax.swing.JPanel {
     private boolean estaRegistrado = false;
 
     public PanelCargarMedico() {
-        
         controlLogico = new ControladoraLogica();
         initComponents();
         
@@ -373,9 +372,7 @@ public class PanelCargarMedico extends javax.swing.JPanel {
 
         // El ítem seleccionado es un objeto. Entonces, lo casteo a String.
         String especialidadMedi = UtilidadesTexto.capitalizarPalabra((String) cmbEspecialidad.getSelectedItem());
-
         String matricMedico = txtMatricula.getText().toUpperCase();
-
         String telMedico = txtTelefono.getText();
         String emailMedico = txtEmail.getText();
         String horariosMedico = txtHorarios.getText();
@@ -503,7 +500,6 @@ public class PanelCargarMedico extends javax.swing.JPanel {
         vuelve al primer elemento del combo y da la sensación que se deselecciona 
         la especialidad había seleccionado cuando cargué/creé el médico. */
         cmbEspecialidad.setSelectedIndex(0);
-
         txtTelefono.setText("");
         txtMatricula.setText("");
         txtEmail.setText("");

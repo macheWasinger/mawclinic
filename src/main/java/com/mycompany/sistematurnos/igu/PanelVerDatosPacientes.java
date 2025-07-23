@@ -304,9 +304,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 
         if (tablaPacientes.getRowCount() > 0) {
-
             if (tablaPacientes.getSelectedRow() != -1) {
-
                 long num_id = Long.parseLong(String.valueOf(tablaPacientes.getValueAt(tablaPacientes.getSelectedRow(), 0)));
                 boolean confirmado = UtilidadesJOptionPane.confirmarAccion(this, "¿Deseas borrar este registro?", "Confirmar eliminación");
 
@@ -315,7 +313,6 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
                     // Aviso al usuario que borró correctamente
                     UtilidadesJOptionPane.mostrarMensaje(this, "Paciente eliminado correctamente", "Info", "Eliminación exitosa");
-
                     cargarTabla();
                 }
             } // Si hizo clic en No, no pasa nada y vuelve al programa
@@ -329,14 +326,11 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         if (tablaPacientes.getRowCount() > 0) {
-
             if (tablaPacientes.getSelectedRow() != -1) {
                 long num_id = Long.parseLong(String.valueOf(tablaPacientes.getValueAt(tablaPacientes.getSelectedRow(), 0)));
 
                 PanelEditarPaciente pantallaEditarPaciente = new PanelEditarPaciente(num_id);
-
                 UtilidadesCardLayout.agregarPanel(this, pantallaEditarPaciente, "PanelEditarPaciente");
-
                 UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelEditarPaciente");
             } else {
                 UtilidadesJOptionPane.mostrarMensaje(this, "No seleccionó ningún paciente", "Error", "Error al eliminar");
@@ -460,15 +454,12 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
                 modeloTablaAmostrar.addRow(objeto_paciente);
             }
         }
-        
         /* Primero seteo el modelo: A la tabla creada en el "Design" llamada 
         "tablaPacientes", le agrego el "modeloTablaAmostrar". */
         tablaPacientes.setModel(modeloTablaAmostrar);
         
         // Después aplico la personalización
-        UtilidadesTableModel.personalizarTablaDeDatos(tablaPacientes);
-        
-        
+        UtilidadesTableModel.personalizarTablaDeDatos(tablaPacientes); 
     }
 
     // Crea un array de tipo Object[] con los datos del paciente

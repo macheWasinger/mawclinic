@@ -183,6 +183,5 @@ public class PacienteJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
+    }   
 }

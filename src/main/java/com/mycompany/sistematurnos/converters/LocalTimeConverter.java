@@ -1,4 +1,3 @@
-
 package com.mycompany.sistematurnos.converters;
 
 import java.sql.Time;

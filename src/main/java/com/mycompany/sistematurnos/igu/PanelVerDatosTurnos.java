@@ -315,9 +315,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         
         if (tablaTurnos.getRowCount() > 0) {
-
             if (tablaTurnos.getSelectedRow() != -1) {
-
                 long num_id = Long.parseLong(String.valueOf(tablaTurnos.getValueAt(tablaTurnos.getSelectedRow(), 0)));
                 boolean confirmado = UtilidadesJOptionPane.confirmarAccion(this, "¿Deseas borrar este registro?", "Confirmar eliminación");
 
@@ -326,7 +324,6 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
 
                     // Aviso al usuario que borró correctamente
                     UtilidadesJOptionPane.mostrarMensaje(this, "Turno eliminado correctamente", "Info", "Eliminación exitosa");
-
                     cargarTabla();
                 }
             }
@@ -347,11 +344,8 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
             if (tablaTurnos.getSelectedRow() != -1) {
                 long num_id = Long.parseLong(String.valueOf(tablaTurnos.getValueAt(tablaTurnos.getSelectedRow(), 0)));
 
-                PanelEditarTurno pantallaEditarTurno = new PanelEditarTurno(num_id);
-                
-                
-                UtilidadesCardLayout.agregarPanel(this, pantallaEditarTurno, "PanelEditarTurno");
-                
+                PanelEditarTurno pantallaEditarTurno = new PanelEditarTurno(num_id);      
+                UtilidadesCardLayout.agregarPanel(this, pantallaEditarTurno, "PanelEditarTurno");  
                 UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelEditarTurno");
             }
             else {
@@ -378,7 +372,6 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
             cargarTabla();
             return;
         }
-        
         
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate fechaIngresada;
@@ -483,9 +476,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
     private Object[] crearObjetoTurno(Turno turno) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         String fechaFormateada = turno.getFecha().format(formatter); // <-- ahora es String bien formateado
-        
         Object[] objeto = {turno.getId(), fechaFormateada, turno.getHora(), turno.getMedicoAsociado(), turno.getPacienteAsociado()};
-        
         return objeto;
     }
 }

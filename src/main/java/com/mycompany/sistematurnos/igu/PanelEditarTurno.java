@@ -26,7 +26,6 @@ public class PanelEditarTurno extends javax.swing.JPanel {
     private LocalDate fechaObtenida;
     private Medico medicoSeleccionado = null;
     private Paciente pacienteSeleccionado = null;
-    
     private Long num_id;
     private Turno turno = null;
 
@@ -56,7 +55,6 @@ public class PanelEditarTurno extends javax.swing.JPanel {
         // Limpio el combo por si acaso
         cmbListaMedicos.removeAllItems();
         cmbListaPacientes.removeAllItems();
-
 
         // Inicializo mapas
         mapaMedicos = new java.util.HashMap<>();
@@ -402,9 +400,7 @@ public class PanelEditarTurno extends javax.swing.JPanel {
         controlLogico.modificarDatosDelTurno(turno, fechaObtenida, horaLocal, medicoSeleccionado, pacienteSeleccionado);
         
         UtilidadesJOptionPane.mostrarMensaje(this, "Turno editado correctamente", "Info", "Registrar turno");
-
         UtilidadesMetodosAuxiliares.recargarTablaPanelVerDatosTurno(this);
-        
         UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelVerDatosTurnos");
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 
@@ -443,9 +439,7 @@ public class PanelEditarTurno extends javax.swing.JPanel {
         for (Medico m : listaMedicos) {
             // Por ejemplo, usás el nombre como clave
             String clave = m.getId() + " - " + m.getNombre() + " - " + m.getEspecialidad();
-
             cmbListaMedicos.addItem(clave);
-
             mapaMedicos.put(clave, m);
         }
     }
@@ -454,7 +448,6 @@ public class PanelEditarTurno extends javax.swing.JPanel {
         for (Paciente p : listaPacientes) {
             String clave = p.getNombre() + " - DNI: " + p.getDni();
             cmbListaPacientes.addItem(clave);
-
             mapaPacientes.put(clave, p);
         }
     }
@@ -510,7 +503,6 @@ public class PanelEditarTurno extends javax.swing.JPanel {
     
     private int indiceMedicoAsociado() {
         this.turno = controlLogico.traerTurno(num_id);
-
         Medico medicoTurno = turno.getMedicoAsociado();
         
         for (int i = 0; i < cmbListaMedicos.getItemCount(); i++) {
@@ -535,7 +527,6 @@ public class PanelEditarTurno extends javax.swing.JPanel {
                 return i;
             }
         }
-
         return 0; // Por defecto "Seleccione un paciente"
     }
     
@@ -587,5 +578,4 @@ public class PanelEditarTurno extends javax.swing.JPanel {
             pacienteSeleccionado = null;
         }
     }
-
 }

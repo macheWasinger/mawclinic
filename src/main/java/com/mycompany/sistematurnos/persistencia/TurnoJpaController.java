@@ -190,6 +190,5 @@ public class TurnoJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
+    }  
 }

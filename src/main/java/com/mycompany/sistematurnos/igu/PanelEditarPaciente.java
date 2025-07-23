@@ -27,7 +27,6 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
         /* Con esto, "num_id" ya tiene valor cuando llamo y no es nulo al 
            buscar el médico. */
         this.num_id = num_id;
-        
         cargarDatos(num_id);
     }
 
@@ -301,9 +300,7 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
     private void btnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCambiosActionPerformed
 
         String nombrePaciente = UtilidadesTexto.capitalizarPalabra(txtNombre.getText());
-
         String dniPaciente = txtDni.getText();
-
         String telPaciente = txtTelefono.getText();
         String emailPaciente = txtEmail.getText();
 
@@ -342,9 +339,7 @@ public class PanelEditarPaciente extends javax.swing.JPanel {
         
         // Mensaje de que se guardó correctamente
         UtilidadesJOptionPane.mostrarMensaje(this, "Paciente editado correctamente", "Info", "Editar paciente");
-        
-        UtilidadesMetodosAuxiliares.recargarTablaPanelVerDatosPaciente(this);   
-        
+        UtilidadesMetodosAuxiliares.recargarTablaPanelVerDatosPaciente(this);    
         UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelVerDatosPacientes");
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 

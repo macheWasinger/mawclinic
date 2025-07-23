@@ -15,7 +15,6 @@ public class PanelCargarPaciente extends javax.swing.JPanel {
     private boolean estaRegistrado = false;
     
     public PanelCargarPaciente() {
-        
         controlLogico = new ControladoraLogica();    
         initComponents();
         
@@ -316,9 +315,7 @@ public class PanelCargarPaciente extends javax.swing.JPanel {
 
         // Valores obtenidos desde la interfaz gráfica y capitalizo algunos atributos:
         String nombrePaciente = UtilidadesTexto.capitalizarPalabra(txtNombre.getText());
-
         String dniPaciente = txtDni.getText();
-
         String telPaciente = txtTelefono.getText();
         String emailPaciente = txtEmail.getText();
 

@@ -3,7 +3,6 @@ package com.mycompany.sistematurnos.utilidades;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 
-
 public class UtilidadesJOptionPane {
     
     // Muestra un mensaje informativo, de error, advertencia o pregunta.

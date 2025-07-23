@@ -17,9 +17,7 @@ public class PanelEditarMedico extends javax.swing.JPanel {
     private Long num_id;
     private Medico medi = null;
 
-
     public PanelEditarMedico(Long num_id) {
-        
         controlLogico = new ControladoraLogica();
         initComponents();
         
@@ -27,11 +25,9 @@ public class PanelEditarMedico extends javax.swing.JPanel {
         UtilidadesBotones.aplicarHoverGrises(btnCancelarCambios);
         UtilidadesBotones.aplicarHoverGrises(btnGuardarCambios);
         
-        
         /* Con esto, "num_id" ya tiene valor cuando llamo y no es nulo al 
            buscar el médico. */
-        this.num_id = num_id;
-        
+        this.num_id = num_id;  
         cargarDatos(num_id);
     }
 
@@ -353,11 +349,8 @@ public class PanelEditarMedico extends javax.swing.JPanel {
     private void btnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCambiosActionPerformed
         // Todos los datos del médico.
         String nombreMedico = UtilidadesTexto.capitalizarPalabra(txtNombre.getText());
-
         String especialidadMedi = UtilidadesTexto.capitalizarPalabra((String) cmbEspecialidad.getSelectedItem());
-
         String matricMedico = txtMatricula.getText().toUpperCase();
-
         String telMedico = txtTelefono.getText();
         String emailMedico = txtEmail.getText();
         String horariosMedico = txtHorarios.getText();
@@ -407,12 +400,9 @@ public class PanelEditarMedico extends javax.swing.JPanel {
         // Mensaje de que se guardó correctamente
         UtilidadesJOptionPane.mostrarMensaje(this, "Médico editado correctamente", "Info", "Editar médico");
 
-        /* Llamo a "VerDatosMedicos" para que cargue la tabla con los datos 
+        /* Invoco a "recargarTablaPanelVerDatosMedico" para que cargue la tabla con los datos 
         modificados y los muestre en pantalla. */
-       
-        
         UtilidadesMetodosAuxiliares.recargarTablaPanelVerDatosMedico(this);
-        
         UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelVerDatosMedicos");
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 
@@ -481,7 +471,6 @@ public class PanelEditarMedico extends javax.swing.JPanel {
     
     private int indiceEspecialidad() {
         this.medi = controlLogico.traerMedico(num_id);
-
         String especialidadDelMedico = medi.getEspecialidad();
 
         /*  - Recorro todos los ítems del combo.

@@ -79,7 +79,5 @@ public class UtilidadesTexto {
         return listaHorarios.stream()
             .allMatch(h -> h.matches("^([01]\\d|2[0-3]):([0-5]\\d)$"));
     }
-
-
     //-----------------------------------
 }

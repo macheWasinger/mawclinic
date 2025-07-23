@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.JButton;
 
-
 public class UtilidadesBotones {
     
     public static void aplicarHoverCelestes(JButton boton) {

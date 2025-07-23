@@ -27,7 +27,6 @@ public class Principal extends javax.swing.JFrame {
         
         // Deshabilita el botón de maximizar y redimensionar
         setResizable(false);
-        
         panelPantallas.setLayout(new CardLayout());
         
         cargarPantallas();
@@ -45,7 +44,6 @@ public class Principal extends javax.swing.JFrame {
         UtilidadesBotones.aplicarHoverCelestes(btnVolverDeVerRegistros);
         
         panelPantallas.setBorder(new MatteBorder(1, 1, 4, 4, new Color(218, 218, 218)));
-        
         btnGestionDatos.setBorder(new LineBorder(new Color(135, 198, 236, 255), 1, true));
     }
 
@@ -546,7 +544,6 @@ public class Principal extends javax.swing.JFrame {
 
     private void volverAlPanelMenuPrincipal() {
         UtilidadesCardLayout.mostrarPanel(contenedorCardPanels, "cardMenu");
-        
         UtilidadesCardLayout.mostrarPanel(panelPantallas, "Inicio");
     }
 

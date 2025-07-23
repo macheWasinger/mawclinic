@@ -3,13 +3,9 @@ package com.mycompany.sistematurnos.utilidades;
 import com.mycompany.sistematurnos.igu.PanelVerDatosMedicos;
 import com.mycompany.sistematurnos.igu.PanelVerDatosPacientes;
 import com.mycompany.sistematurnos.igu.PanelVerDatosTurnos;
-import com.mycompany.sistematurnos.logica.ControladoraLogica;
-import com.mycompany.sistematurnos.logica.Medico;
-import com.mycompany.sistematurnos.logica.Paciente;
 import java.awt.Component;
 
 public class UtilidadesMetodosAuxiliares {
-    //ControladoraLogica controlLogico = new ControladoraLogica();
     
     // "panel" recibe el "this" de la clase que lo invoca.
     public static void recargarTablaPanelVerDatosMedico(Component panel) {
@@ -54,7 +50,6 @@ public class UtilidadesMetodosAuxiliares {
        Component[] componentes = panel.getParent().getComponents();
 
        for (Component c : componentes) {
-           
            if (c instanceof PanelVerDatosPacientes) {
                PanelVerDatosPacientes panelPacientes = (PanelVerDatosPacientes) c;
                panelPacientes.cargarTabla();
@@ -68,9 +63,7 @@ public class UtilidadesMetodosAuxiliares {
        Component[] componentes = panel.getParent().getComponents();
 
        for (Component c : componentes) {
-           
            if (c instanceof PanelVerDatosTurnos) {
-
                ((PanelVerDatosTurnos) c).cargarTabla();
                break;
            }
