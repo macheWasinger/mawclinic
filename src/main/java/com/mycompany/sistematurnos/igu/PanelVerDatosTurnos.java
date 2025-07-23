@@ -73,6 +73,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1060, 560));
 
+        contenedorPrincipal.setBackground(new java.awt.Color(243, 243, 243));
         contenedorPrincipal.setMinimumSize(new java.awt.Dimension(0, 0));
         contenedorPrincipal.setPreferredSize(new java.awt.Dimension(1057, 560));
 
@@ -82,11 +83,13 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
         txtTituloPrincipal.setAlignmentY(0.0F);
         txtTituloPrincipal.setPreferredSize(new java.awt.Dimension(271, 33));
 
+        panelContenedorTabla.setBackground(new java.awt.Color(243, 243, 243));
         panelContenedorTabla.setPreferredSize(new java.awt.Dimension(1056, 431));
 
         panelTabla.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         panelTabla.setPreferredSize(new java.awt.Dimension(993, 397));
 
+        tablaTurnos.setBackground(new java.awt.Color(255, 255, 255));
         tablaTurnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -182,6 +185,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
 
+        contenedorDatoFiltrado.setBackground(new java.awt.Color(243, 243, 243));
         contenedorDatoFiltrado.setPreferredSize(new java.awt.Dimension(242, 20));
 
         txtDatoFiltrado.setFont(new java.awt.Font("Segoe UI", 2, 11)); // NOI18N

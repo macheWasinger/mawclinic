@@ -66,7 +66,10 @@ public class PanelEditarMedico extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1057, 560));
 
+        contenedorPadre_cargarMedico.setBackground(new java.awt.Color(243, 243, 243));
         contenedorPadre_cargarMedico.setPreferredSize(new java.awt.Dimension(1057, 560));
+
+        contenedorLogoTitulo_editarMedico.setBackground(new java.awt.Color(243, 243, 243));
 
         txtTituloPrincipal1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         txtTituloPrincipal1.setForeground(new java.awt.Color(74, 161, 222));
@@ -97,6 +100,7 @@ public class PanelEditarMedico extends javax.swing.JPanel {
 
         imagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen-3-MawClinic_opacity25_300x330.png"))); // NOI18N
 
+        contenedorFormulario.setBackground(new java.awt.Color(243, 243, 243));
         contenedorFormulario.setPreferredSize(new java.awt.Dimension(333, 317));
 
         labelNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -218,6 +222,8 @@ public class PanelEditarMedico extends javax.swing.JPanel {
                     .addComponent(txtHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
+
+        contenedorBtnLimpiarGuardar.setBackground(new java.awt.Color(243, 243, 243));
 
         btnLimpiar.setBackground(new java.awt.Color(213, 213, 213));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N

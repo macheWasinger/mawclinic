@@ -70,6 +70,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1057, 560));
 
+        contenedorPrincipal.setBackground(new java.awt.Color(243, 243, 243));
         contenedorPrincipal.setMinimumSize(new java.awt.Dimension(0, 0));
         contenedorPrincipal.setPreferredSize(new java.awt.Dimension(1057, 560));
 
@@ -79,11 +80,14 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
         txtTituloPrincipal.setAlignmentY(0.0F);
         txtTituloPrincipal.setPreferredSize(new java.awt.Dimension(271, 33));
 
+        panelContenedorTabla.setBackground(new java.awt.Color(243, 243, 243));
         panelContenedorTabla.setPreferredSize(new java.awt.Dimension(1056, 431));
 
+        panelTabla.setBackground(new java.awt.Color(243, 243, 243));
         panelTabla.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         panelTabla.setPreferredSize(new java.awt.Dimension(993, 397));
 
+        tablaPacientes.setBackground(new java.awt.Color(255, 255, 255));
         tablaPacientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -170,6 +174,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
             .addComponent(txtNombreOdni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
         );
 
+        contenedorDatoFiltrado.setBackground(new java.awt.Color(243, 243, 243));
         contenedorDatoFiltrado.setPreferredSize(new java.awt.Dimension(242, 20));
 
         txtDatoFiltrado.setFont(new java.awt.Font("Segoe UI", 2, 11)); // NOI18N

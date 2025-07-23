@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.UIManager;
+import javax.swing.border.MatteBorder;
 
 
 public class Principal extends javax.swing.JFrame {
@@ -41,6 +42,8 @@ public class Principal extends javax.swing.JFrame {
         UtilidadesBotones.aplicarHoverCelestes(btnVerPacientes);
         UtilidadesBotones.aplicarHoverCelestes(btnVerTurnos);
         UtilidadesBotones.aplicarHoverCelestes(btnVolverDeVerRegistros);
+        
+         panelPantallas.setBorder(new MatteBorder(1, 1, 4, 4, new Color(218, 218, 218)));
     }
 
  
@@ -405,7 +408,7 @@ public class Principal extends javax.swing.JFrame {
 
         contenedorCardPanels.add(panelVerRegistros, "cardVer");
 
-        panelPantallas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        panelPantallas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(221, 221, 221), 1, true));
         panelPantallas.setMinimumSize(new java.awt.Dimension(0, 0));
         panelPantallas.setName(""); // NOI18N
         panelPantallas.setPreferredSize(new java.awt.Dimension(1060, 560));
