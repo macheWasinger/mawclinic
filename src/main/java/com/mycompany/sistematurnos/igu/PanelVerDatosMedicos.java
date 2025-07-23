@@ -527,12 +527,17 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
                 modeloTablaAmostrar.addRow(objeto_medico);
             }
         }
-        /* Le asigno el "modelo de tabla"(diseño) que personalicé
-           a la tabla que creé en la interfaz gráfica mediante su 
+        
+        /* 
+           Primero seteo el modelo: Le asigno el "modelo de tabla"(diseño) que 
+           personalicé a la tabla que creé en la interfaz gráfica mediante su 
            variable "tablaMedicos" así la interfaz gráfica sabe qué 
            es lo que tiene que renderizar.
             */
         tablaMedicos.setModel(modeloTablaAmostrar);
+        
+        // Después aplico la personalización
+        UtilidadesTableModel.personalizarTablaDeDatos(tablaMedicos);
     }
     
     // Crea un array de tipo Object[] con los datos del paciente

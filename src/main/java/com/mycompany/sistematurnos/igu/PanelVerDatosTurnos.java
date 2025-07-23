@@ -463,7 +463,12 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
                 modeloTablaAmostrar.addRow(objeto_turno);
             }
         }
+        
+        // Primero seteo el modelo
         tablaTurnos.setModel(modeloTablaAmostrar);
+        
+        // Después aplico la personalización
+        UtilidadesTableModel.personalizarTablaDeDatos(tablaTurnos);
     }
 
     private void limpiarBusqueda() {

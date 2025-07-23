@@ -460,9 +460,14 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
             }
         }
         
-        /* A la tabla creada en el "Design" llamada "tablaPacientes", le agrego
-        el "modeloTablaAmostrar". */
+        /* Primero seteo el modelo: A la tabla creada en el "Design" llamada 
+        "tablaPacientes", le agrego el "modeloTablaAmostrar". */
         tablaPacientes.setModel(modeloTablaAmostrar);
+        
+        // Después aplico la personalización
+        UtilidadesTableModel.personalizarTablaDeDatos(tablaPacientes);
+        
+        
     }
 
     // Crea un array de tipo Object[] con los datos del paciente
