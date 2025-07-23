@@ -412,6 +412,7 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
             
             if (turnoBuscado) {
                 tablaTurnos.setModel(modeloTablaAmostrar);
+                UtilidadesTableModel.personalizarTablaDeDatos(tablaTurnos);
             } else {
                 UtilidadesJOptionPane.mostrarMensaje(this, "No se encontró el turno", "Error", "Error al buscar");
                 

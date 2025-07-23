@@ -407,6 +407,7 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
             
             if (pacienteBuscado) {
                 tablaPacientes.setModel(modeloTablaAmostrar);
+                UtilidadesTableModel.personalizarTablaDeDatos(tablaPacientes);
             } else {
                 UtilidadesJOptionPane.mostrarMensaje(this, "No se encontró el paciente", "Error", "Error al buscar");
                 
