@@ -17,7 +17,7 @@ public class PanelInicio extends javax.swing.JPanel {
         txtSubtituloInicio = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(243, 243, 243));
-        setPreferredSize(new java.awt.Dimension(1040, 560));
+        setPreferredSize(new java.awt.Dimension(1057, 560));
 
         contenedorInicio.setBackground(new java.awt.Color(242, 242, 242));
         contenedorInicio.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -67,9 +67,8 @@ public class PanelInicio extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(contenedorInicio, 1038, 1038, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(contenedorInicio, 1038, 1038, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
