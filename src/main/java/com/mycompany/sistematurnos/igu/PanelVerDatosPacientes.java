@@ -41,7 +41,10 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
             }
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                if (txtNombreOdni.getText().trim().isEmpty()) {
+                String texto = txtNombreOdni.getText().trim();
+
+                // Si el texto está vacío Y no hay filtro activo → limpia
+                if (texto.isEmpty() && txtDatoFiltrado.getText().isEmpty()) {
                     limpiarBusqueda();
                 }
             }
@@ -105,6 +108,8 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
             }
         ));
+        tablaPacientes.setSelectionBackground(new java.awt.Color(102, 178, 255));
+        tablaPacientes.setSelectionForeground(new java.awt.Color(0, 0, 0));
         panelTabla.setViewportView(tablaPacientes);
 
         subtituloTabla.setFont(new java.awt.Font("Segoe UI", 2, 13)); // NOI18N

@@ -42,7 +42,10 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
             }
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                if (txtNombreOespecialidad.getText().trim().isEmpty()) {
+                String texto = txtNombreOespecialidad.getText().trim();
+
+                // Si el texto está vacío Y no hay filtro activo → limpia
+                if (texto.isEmpty() && txtDatoFiltrado.getText().isEmpty()) {
                     limpiarBusqueda();
                 }
             }
@@ -107,7 +110,8 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
 
             }
         ));
-        tablaMedicos.setSelectionBackground(new java.awt.Color(133, 197, 237));
+        tablaMedicos.setSelectionBackground(new java.awt.Color(102, 178, 255));
+        tablaMedicos.setSelectionForeground(new java.awt.Color(0, 0, 0));
         panelTabla.setViewportView(tablaMedicos);
 
         subtituloTabla.setFont(new java.awt.Font("Segoe UI", 2, 13)); // NOI18N
@@ -395,8 +399,7 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
                 médico tiene que editar. */
                 PanelEditarMedico pantallaEditarMedico = new PanelEditarMedico(num_id);
 
-                UtilidadesCardLayout.agregarPanel(this, pantallaEditarMedico, "PanelEditarMedico");
-                
+                UtilidadesCardLayout.agregarPanel(this, pantallaEditarMedico, "PanelEditarMedico");       
                 UtilidadesCardLayout.mostrarPanel(this.getParent(), "PanelEditarMedico");
             }
             else {

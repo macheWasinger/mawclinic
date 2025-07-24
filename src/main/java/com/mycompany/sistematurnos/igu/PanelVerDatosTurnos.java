@@ -43,7 +43,10 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
             }
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                if (txtFecha.getText().trim().isEmpty()) {
+                String texto = txtFecha.getText().trim();
+
+                // Si el texto está vacío Y no hay filtro activo → limpia
+                if (texto.isEmpty() && txtDatoFiltrado.getText().isEmpty()) {
                     limpiarBusqueda();
                 }
             }
@@ -107,6 +110,8 @@ public class PanelVerDatosTurnos extends javax.swing.JPanel {
 
             }
         ));
+        tablaTurnos.setSelectionBackground(new java.awt.Color(102, 178, 255));
+        tablaTurnos.setSelectionForeground(new java.awt.Color(0, 0, 0));
         panelTabla.setViewportView(tablaTurnos);
 
         subtituloTabla.setFont(new java.awt.Font("Segoe UI", 2, 13)); // NOI18N
