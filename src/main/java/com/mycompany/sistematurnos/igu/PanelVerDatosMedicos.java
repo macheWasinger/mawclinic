@@ -442,7 +442,12 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
 
         if (listaMedicos != null) {
             for (Medico medico : listaMedicos) {
-                if(quitarTildes(medico.getNombre()).equalsIgnoreCase(input)) {
+                // Buscar por nombre del médico
+                String inputSinTildes = quitarTildes(input);
+                String nombreSinTildes = quitarTildes(medico.getNombre());
+                String especialidadSinTildes = quitarTildes(medico.getEspecialidad());
+                
+                if(nombreSinTildes.toLowerCase().contains(inputSinTildes.toLowerCase())) {
                     Object[] objeto_medico = crearObjetoMedico(medico);   
                     modeloTablaAmostrar.addRow(objeto_medico);
                     
@@ -452,7 +457,8 @@ public class PanelVerDatosMedicos extends javax.swing.JPanel {
                     medicoBuscado = true;
                 }
                 
-                if (quitarTildes(medico.getEspecialidad()).equalsIgnoreCase(input)) {
+                // Buscar por la especialidad
+                if (especialidadSinTildes.toLowerCase().contains(inputSinTildes.toLowerCase())) {
                     Object[] objeto_medico = crearObjetoMedico(medico);
                     modeloTablaAmostrar.addRow(objeto_medico);
                     

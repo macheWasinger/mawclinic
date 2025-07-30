@@ -371,13 +371,17 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
 
         if (listaPacientes != null) {
             for (Paciente paciente : listaPacientes) {
+                String nombreSinTilde = quitarTildes(paciente.getNombre());
+                String inputSinTilde = quitarTildes(input);
+                
                 if (input.matches("\\d+")) {
                     if (!UtilidadesTexto.esDniValido(input)) {
                         UtilidadesJOptionPane.mostrarMensaje(this, "El DNI no es válido. Debe tener 7 u 8 dígitos", "Error", "Error al guardar el paciente");
                         return;
                     }
                     
-                    if (paciente.getDni().equals(input)) {
+                    // Buscar paciente por DNI
+                    if (paciente.getDni().contains(input)) {
                         Object[] objeto_paciente = crearObjetoPaciente(paciente);   
                         modeloTablaAmostrar.addRow(objeto_paciente);
                         
@@ -392,7 +396,8 @@ public class PanelVerDatosPacientes extends javax.swing.JPanel {
                         return;
                     }
                     
-                    if (quitarTildes(paciente.getNombre()).equalsIgnoreCase(input)) {
+                    // Buscar paciente por nombre
+                    if (nombreSinTilde.toLowerCase().contains(inputSinTilde)) {
                         Object[] objeto_paciente = crearObjetoPaciente(paciente);
                         modeloTablaAmostrar.addRow(objeto_paciente);
                         
